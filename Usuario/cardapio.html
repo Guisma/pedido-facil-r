@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tapioca da Dona Maria</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <header class="bg-primary">
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Tapioca da Dona Maria</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Cardápio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pedidos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Histórico de pedidos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Cupons</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Configurações</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container my-4">
+        <button class="btn btn-primary register-item">Cadastrar Item</button>
+        <div class="row item-container">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="img-placeholder">IMG</div>
+                        <h5 class="card-title item-title">Tapioca de queijo</h5>
+                        <p class="card-text item-description">Descrição do item: descrição</p>
+                        <p class="item-price">Valor: 27,50R$</p>
+                        <div class="button-group">
+                            <button class="btn btn-primary edit">Editar</button>
+                            <button class="btn btn-danger delete">Excluir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="img-placeholder">IMG</div>
+                        <h5 class="card-title item-title">Nome do item</h5>
+                        <p class="card-text item-description">Descrição do item</p>
+                        <p class="item-price">Valor: 27,50R$</p>
+                        <div class="button-group">
+                            <button class="btn btn-primary edit">Editar</button>
+                            <button class="btn btn-danger delete">Excluir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="img-placeholder">IMG</div>
+                        <h5 class="card-title item-title">Nome do item</h5>
+                        <p class="card-text item-description">Descrição do item</p>
+                        <p class="item-price">Valor: 27,50R$</p>
+                        <div class="button-group">
+                            <button class="btn btn-primary edit">Editar</button>
+                            <button class="btn btn-danger delete">Excluir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer bg-primary text-white py-3 mt-auto">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2024 Pedido Fácil</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Pedido Fácil</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #007bff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .form-container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 600px; /* Increased width */
+      height: auto; /* Automatic height */
+    }
+    .form-group label {
+      font-weight: bold;
+    }
+    .plan-option {
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 5px;
+      height: 100%;
+    }
+    .row {
+      margin-right: -10px;
+      margin-left: -10px;
+    }
+    .col-md-6 {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h3 class="text-center">Pedido Fácil</h3>
+    <p class="text-center">Crie sua conta e simplifique suas vendas!</p>
+    <form>
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" class="form-control" id="nome" placeholder="Seu nome aqui">
+      </div>
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="email" class="form-control" id="email" placeholder="exemplo@exemplo.com">
+      </div>
+      <div class="form-group">
+        <label for="telefone">Telefone</label>
+        <input type="text" class="form-control" id="telefone" placeholder="(81) 90000-0000">
+      </div>
+      <div class="form-group">
+        <label for="tipoConta">Tipo de conta</label>
+        <select class="form-control" id="tipoConta" onchange="updatePlaceholder()">
+          <option value="CNPJ">CNPJ</option>
+          <option value="CPF">CPF</option>
+        </select>
+        <input type="text" class="form-control mt-2" id="tipoContaInput" placeholder="11.165.418/0001-01">
+      </div>
+      <div class="form-group">
+        <label for="nomeLoja">Nome da loja</label>
+        <input type="text" class="form-control" id="nomeLoja" placeholder="Crie um nome único pra sua loja">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="********">
+        <small class="form-text text-muted">
+          Crie uma senha com no mínimo 10 caracteres. Utilize letras, números e caracteres especiais.
+        </small>
+      </div>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="plan-option">
+              <div class="custom-control custom-radio">
+                <input type="radio" id="planoMensal" name="plano" class="custom-control-input" checked>
+                <label class="custom-control-label" for="planoMensal">Plano mensal</label>
+              </div>
+              <ul>
+                <li>Pedidos ilimitados</li>
+                <li>Cardápio ilimitado</li>
+                <li>Link para sua loja</li>
+                <li>Hospedagem de loja grátis</li>
+              </ul>
+              <p><strong>Valor: 52,60R$</strong></p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="plan-option">
+              <div class="custom-control custom-radio">
+                <input type="radio" id="planoTemporada" name="plano" class="custom-control-input">
+                <label class="custom-control-label" for="planoTemporada">Plano por temporada (2 meses de duração)</label>
+              </div>
+              <ul>
+                <li>Pedidos ilimitados</li>
+                <li>Cardápio ilimitado</li>
+                <li>Link para sua loja</li>
+                <li>Hospedagem de loja grátis</li>
+              </ul>
+              <p><strong>Valor: 65,72R$</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
+    </form>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    function updatePlaceholder() {
+      const tipoConta = document.getElementById('tipoConta').value;
+      const tipoContaInput = document.getElementById('tipoContaInput');
+      if (tipoConta === 'CPF') {
+        tipoContaInput.placeholder = '000.000.000-00';
+      } else {
+        tipoContaInput.placeholder = '11.165.418/0001-01';
+      }
+    }
+  </script>
+</body>
+</html>

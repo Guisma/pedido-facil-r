@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tapioca da Dona Maria</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .orders {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .order-card {
+            background-color: #dcdcdc; /* Cinza mais escuro */
+            color: #333; /* Cor do texto */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            flex: 0 0 calc(50% - 20px); /* Coloca dois cartões por linha */
+            max-width: 400px; /* Limita a largura máxima dos cartões */
+        }
+
+        .order-card p {
+            margin: 0 0 10px;
+        }
+
+        .client-review {
+            margin-top: 20px;
+            padding-top: 10px;
+            border-top: 1px solid #ddd;
+        }
+
+        footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        footer .footer-content {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><i class="fas fa-store"></i> Tapioca da Dona Maria</div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Cardápio</a></li>
+                <li><a href="#">Pedidos</a></li>
+                <li><a href="#">Histórico de Pedidos</a></li>
+                <li><a href="#">Cupons</a></li>
+                <li><a href="#">Configurações</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="orders">
+            <div class="order-card">
+                <p><strong>Nome do Cliente:</strong> John Doe</p>
+                <p><strong>Endereço:</strong> Rua ABC, 123</p>
+                <p><strong>Contato do Cliente:</strong> (11) 1234-5678</p>
+                <p><strong>Status do Pedido:</strong> Em Andamento</p>
+                <p><strong>Pedido:</strong> Tapioca de Frango</p>
+                <p><strong>Valor:</strong> R$ 15,00</p>
+                <p><strong>Forma de Pagamento:</strong> Cartão de Crédito</p>
+                <p><strong>Mensagem do Cliente:</strong> Sem observações</p>
+                <div class="client-review">
+                    <p><strong>Avaliação do Cliente:</strong> 5/10</p>
+                    <p>Mensagem do Cliente: Ótimo serviço!</p>
+                </div>
+            </div>
+            <div class="order-card">
+                <p><strong>Nome do Cliente:</strong> Maria Silva</p>
+                <p><strong>Endereço:</strong> Av. XYZ, 456</p>
+                <p><strong>Contato do Cliente:</strong> (11) 9876-5432</p>
+                <p><strong>Status do Pedido:</strong> Pendente</p>
+                <p><strong>Pedido:</strong> Tapioca de Queijo</p>
+                <p><strong>Valor:</strong> R$ 12,00</p>
+                <p><strong>Forma de Pagamento:</strong> Dinheiro</p>
+                <p><strong>Mensagem do Cliente:</strong> Adicionar mais queijo</p>
+                <div class="client-review">
+                    <p><strong>Avaliação do Cliente:</strong> 7/10</p>
+                    <p>Mensagem do Cliente: Ótimo serviço!</p>
+                </div>
+            </div>
+            <div class="order-card">
+                <p><strong>Nome do Cliente:</strong> Ana Santos</p>
+                <p><strong>Endereço:</strong> Rua DEF, 789</p>
+                <p><strong>Contato do Cliente:</strong> (11) 5555-5555</p>
+                <p><strong>Status do Pedido:</strong> Entregue</p>
+                <p><strong>Pedido:</strong> Tapioca de Banana</p>
+                <p><strong>Valor:</strong> R$ 10,00</p>
+                <p><strong>Forma de Pagamento:</strong> Cartão de Débito</p>
+                <p><strong>Mensagem do Cliente:</strong> Sem observações</p>
+                <div class="client-review">
+                    <p><strong>Avaliação do Cliente:</strong> 9/10</p>
+                    <p>Mensagem do Cliente: Excelente atendimento!</p>
+                </div>
+            </div>
+            <div class="order-card">
+                <p><strong>Nome do Cliente:</strong> Pedro Oliveira</p>
+                <p><strong>Endereço:</strong> Av. GHI, 1010</p>
+                <p><strong>Contato do Cliente:</strong> (11) 1234-5678</p>
+                <p><strong>Status do Pedido:</strong> Em Andamento</p>
+                <p><strong>Pedido:</strong> Tapioca de Frango</p>
+                <p><strong>Valor:</strong> R$ 15,00</p>
+                <p><strong>Forma de Pagamento:</strong> Cartão de Crédito</p>
+                <p><strong>Mensagem do Cliente:</strong> Sem observações</p>
+                <div class="client-review">
+                    <p><strong>Avaliação do Cliente:</strong> 6/10</p>
+                    <p>Mensagem do Cliente: Ótimo serviço!</p>
+                </div>
+            </div>
+            <div class="order-card">
+                <p><strong>Nome do Cliente:</strong> Maria Oliveira</p>
+                <p><strong>Endereço:</strong> Rua JKL, 789</p>
+                <p><strong>Contato do Cliente:</strong> (11) 9876-5432</p>
+                <p><strong>Status do Pedido:</strong> Pendente</p>
+                <p><strong>Pedido:</strong> Tapioca de Queijo</p>
+                <p><strong>Valor:</strong> R$ 12,00</p>
+                <p><strong>Forma de Pagamento:</strong> Dinheiro</p>
+                <p><strong>Mensagem do Cliente:</strong> Adicionar mais queijo</p>
+                <div class="client-review">
+                    <p><strong>Avaliação do Cliente:</strong> 8/10</p>
+                    <p>Mensagem do Cliente: Ótimo serviço!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 Pedido Fácil</p>
+      </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+

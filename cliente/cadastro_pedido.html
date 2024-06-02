@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            margin-top: 20px;
+        }
+        .form-section {
+            border-right: 1px solid #000;
+            padding-right: 20px;
+        }
+        .form-section:last-child {
+            border-right: none;
+            padding-left: 20px;
+        }
+        .card {
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .logo {
+            width: 50px;
+            height: 50px;
+            background-color: #6c757d;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: #e0e0e0;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">Logo</div>
+        <h1>Nome da Loja</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 form-section">
+                <h5>Faça Login para finalizar o pedido</h5>
+                <form>
+                    <div class="form-group">
+                        <label for="loginEmail">E-mail</label>
+                        <input type="email" class="form-control" id="loginEmail" placeholder="E-mail">
+                    </div>
+                    <div class="form-group">
+                        <label for="loginSenha">Senha</label>
+                        <input type="password" class="form-control" id="loginSenha" placeholder="Senha">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Fazer login</button>
+                </form>
+            </div>
+            <div class="col-md-7 form-section">
+                <h5>Cadastrar-se para finalizar o pedido</h5>
+                <form>
+                    <div class="form-group">
+                        <label for="cadastroNome">Nome</label>
+                        <input type="text" class="form-control" id="cadastroNome" placeholder="Seu nome aqui">
+                    </div>
+                    <div class="form-group">
+                        <label for="cadastroEmail">E-mail</label>
+                        <input type="email" class="form-control" id="cadastroEmail" placeholder="exemplo@exemplo.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="cadastroTelefone">Telefone</label>
+                        <input type="text" class="form-control" id="cadastroTelefone" placeholder="(81) 00000-0000">
+                    </div>
+                    <div class="form-group">
+                        <label for="cadastroEndereco">Endereço</label>
+                        <input type="text" class="form-control" id="cadastroEndereco" placeholder="Rua de olinda">
+                    </div>
+                    <div class="form-group">
+                        <label for="cadastroNumero">Número da casa</label>
+                        <input type="text" class="form-control" id="cadastroNumero" placeholder="1090">
+                    </div>
+                    <div class="form-group">
+                        <label for="cadastroSenha">Senha</label>
+                        <input type="password" class="form-control" id="cadastroSenha" placeholder="Senha">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

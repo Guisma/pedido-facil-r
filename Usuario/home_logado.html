@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tapioca da dona Maria</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 0;
+        }
+
+        header .navbar-brand {
+            font-weight: bold;
+        }
+
+        .store-status .text-danger {
+            color: red;
+        }
+
+        .order-item h5 {
+            margin-top: 0;
+        }
+
+        .order-item .btn-light {
+            color: #007bff;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        .orders h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        .buttons .btn {
+            width: 48%;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-primary">
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Tapioca da Dona Maria</a>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Cardápio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pedidos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Histórico de pedidos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Cupons</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Configurações</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container mt-4">
+        <section class="store-status mb-4">
+            <div class="d-flex justify-content-between align-items-center">
+                <p class="mb-0">Status da loja: <span class="text-danger">fechado</span> <button class="btn btn-primary ml-2">Abrir loja</button></p>
+                <p class="mb-0">Compartilhe o link da sua loja: sualoja.dominio.com.br <button class="btn btn-primary ml-2">Copiar</button></p>
+            </div>
+        </section>
+        <section class="orders mb-4">
+            <h2>Últimos Pedidos</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card bg-primary text-white">
+                        <div class="card-body">
+                            <h5 class="card-title">Nome do cliente</h5>
+                            <p class="card-text">Endereço</p>
+                            <p class="card-text">Pedido</p>
+                            <p class="card-text">Valor</p>
+                            <p class="card-text">Forma de pagamento</p>
+                            <p class="card-text">Descrição</p>
+                            <a href="#" class="btn btn-light">Ver detalhes do pedido</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card bg-primary text-white">
+                        <div class="card-body">
+                            <h5 class="card-title">Nome do cliente</h5>
+                            <p class="card-text">Endereço</p>
+                            <p class="card-text">Pedido</p>
+                            <p class="card-text">Valor</p>
+                            <p class="card-text">Forma de pagamento</p>
+                            <p class="card-text">Descrição</p>
+                            <a href="#" class="btn btn-light">Ver detalhes do pedido</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card bg-primary text-white">
+                        <div class="card-body">
+                            <h5 class="card-title">Nome do cliente</h5>
+                            <p class="card-text">Endereço</p>
+                            <p class="card-text">Pedido</p>
+                            <p class="card-text">Valor</p>
+                            <p class="card-text">Forma de pagamento</p>
+                            <p class="card-text">Descrição</p>
+                            <a href="#" class="btn btn-light">Ver detalhes do pedido</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="text-primary">Ver histórico de pedidos</a>
+        </section>
+        <section class="buttons mb-4">
+            <div class="d-flex justify-content-between">
+                <button class="btn btn-primary">Veja como estão indo suas vendas</button>
+                <button class="btn btn-primary">Crie cupons para atrair mais clientes</button>
+            </div>
+        </section>
+    </main>
+    <footer class="footer bg-primary text-white py-3 mt-auto">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2024 Pedido Fácil</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

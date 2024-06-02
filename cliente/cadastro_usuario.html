@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body.theme1 {
+            background-color: #007bff; /* Fundo azul */
+        }
+        body.theme2 {
+            background-color: #f8f9fa; /* Fundo claro */
+        }
+        .card.theme1 {
+            background-color: #ffffff; /* Fundo branco do formulário */
+            color: #000000; /* Texto preto */
+        }
+        .card.theme2 {
+            background-color: #343a40; /* Fundo escuro do formulário */
+            color: #ffffff; /* Texto branco */
+        }
+        .btn-custom {
+            background-color: #007bff; /* Botão azul */
+            border: none;
+        }
+        .btn-custom:hover {
+            background-color: #0056b3; /* Cor do botão ao passar o mouse */
+        }
+        .switch {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            width: 350px; /* Largura fixa para o cartão */
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="theme1">
+    <div class="switch">
+        <button class="btn btn-secondary" onclick="toggleTheme()">Switch Theme</button>
+    </div>
+    <div class="card theme1">
+        <div class="card-body">
+            <h5 class="card-title text-center">Cadastro de Usuário</h5>
+            <p class="card-text text-center">Crie sua conta e simplifique suas vendas!</p>
+            <form>
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" class="form-control" id="nome" placeholder="Seu nome completo">
+                </div>
+                <div class="form-group">
+                    <label for="cpf">CPF</label>
+                    <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00">
+                </div>
+                <div class="form-group">
+                    <label for="celular">Número de Celular</label>
+                    <input type="text" class="form-control" id="celular" placeholder="(00) 00000-0000">
+                </div>
+                <div class="form-group">
+                    <label for="endereco">Endereço</label>
+                    <input type="text" class="form-control" id="endereco" placeholder="Seu endereço">
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" class="form-control" id="senha" placeholder="Sua senha">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('theme1');
+            document.body.classList.toggle('theme2');
+            var card = document.querySelector('.card');
+            card.classList.toggle('theme1');
+            card.classList.toggle('theme2');
+        }
+    </script>
+</body>
+</html>

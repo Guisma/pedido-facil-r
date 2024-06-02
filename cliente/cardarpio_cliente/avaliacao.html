@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avaliação do Pedido</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f8f9fa;
+    }
+    .evaluation-form {
+      background-color: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .evaluation-form img {
+      width: 150px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    .rating-buttons {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .rating-buttons .btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin: 0 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+    .rating-buttons .btn.selected {
+      background-color: #007bff;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<div class="evaluation-form">
+  <img src="avaliacao.png" alt="Avaliação">
+  <h2>Avalie seu pedido</h2>
+  <form>
+    <div class="form-group">
+      <label for="nota">Qual a nota de 1 a 10 pro seu pedido?</label>
+      <div class="rating-buttons" id="ratingButtons">
+        <!-- Botões de avaliação serão gerados aqui pelo JavaScript -->
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="comentario">Descreva o que achou do pedido:</label>
+      <textarea id="comentario" class="form-control" rows="4"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar avaliação</button>
+  </form>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const ratingButtonsContainer = document.getElementById("ratingButtons");
+    
+    for (let i = 1; i <= 10; i++) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "btn btn-outline-primary";
+      button.textContent = i;
+      button.addEventListener("click", function() {
+        // Remove a classe 'selected' de todos os botões
+        const buttons = document.querySelectorAll(".rating-buttons .btn");
+        buttons.forEach(btn => btn.classList.remove("selected"));
+        
+        // Adiciona a classe 'selected' ao botão clicado
+        button.classList.add("selected");
+        
+        // Atualiza o valor do campo de input (nota)
+        document.getElementById("nota").value = i;
+      });
+      ratingButtonsContainer.appendChild(button);
+    }
+  });
+</script>
+
+</body>
+</html>

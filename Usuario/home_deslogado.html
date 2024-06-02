@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Pedido Fácil</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      color: #333333;
+      position: relative;
+      min-height: 100vh;
+      padding-bottom: 60px; /* Footer height */
+    }
+    .navbar {
+      background-color: #007bff;
+    }
+    .navbar-brand, .navbar-nav .nav-link {
+      color: #ffffff !important;
+    }
+    .hero-section {
+      text-align: center;
+      padding: 60px 20px; /* Adjusted padding for better spacing */
+      background-color: #ffffff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+    }
+    .hero-section h1 {
+      color: #333333;
+      margin-bottom: 40px;
+    }
+    .contact-form {
+      background-color: #007bff;
+      color: white;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 400px;
+      margin: auto;
+    }
+    .plans-section {
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .plan-card {
+      background-color: #ffffff;
+      color: #007bff;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .plan-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    .plan-card h4 {
+      margin-bottom: 20px;
+    }
+    .plan-card ul {
+      padding-left: 0;
+      list-style: none;
+    }
+    .plan-card ul li {
+      margin-bottom: 10px;
+    }
+    .footer {
+      background-color: #007bff;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#">Pedido Fácil</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Cadastrar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Login</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <h1>AUTOMATIZE SEU ATENDIMENTO E GERENCIE SEUS PEDIDOS</h1>
+    <div class="contact-form">
+      <h4 class="text-center">Fale com um consultor</h4>
+      <form>
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input type="text" class="form-control" id="nome" placeholder="Seu nome">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="seuemail@email.com">
+        </div>
+        <div class="form-group">
+          <label for="celular">Celular</label>
+          <input type="text" class="form-control" id="celular" placeholder="(81) 98888-8888">
+        </div>
+        <button type="submit" class="btn btn-light btn-block">Receber contato</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Plans Section -->
+  <div class="plans-section">
+    <h2>Planos</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <div class="plan-card">
+          <h4>Plano Mensal</h4>
+          <ul>
+            <li>Pedidos ilimitados</li>
+            <li>Cardápio ilimitado</li>
+            <li>Link para sua loja</li>
+            <li>Hospedagem de loja grátis</li>
+          </ul>
+          <p><strong>Valor: 52,95R$</strong></p>
+          <button class="btn btn-primary btn-block">Contratar</button>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="plan-card">
+          <h4>Plano Temporada</h4>
+          <p>3 Meses de duração</p>
+          <ul>
+            <li>Pedidos ilimitados</li>
+            <li>Cardápio ilimitado</li>
+            <li>Link para sua loja</li>
+            <li>Hospedagem de loja grátis</li>
+          </ul>
+          <p><strong>Valor: 52,95R$</strong></p>
+          <button class="btn btn-primary btn-block">Contratar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 Pedido Fácil</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
